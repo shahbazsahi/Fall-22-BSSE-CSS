@@ -1,0 +1,134 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#container{
+    width: 90%;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 0 auto;
+}
+
+#header{
+    width: 100%;
+    border: 1px solid rgb(0, 0, 200);
+}
+
+#header img{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+#header h1{
+    font-size: 36px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    float: left;
+}
+
+#nav-bar, #left-nav{
+    width: 100%;
+    background-color: rgb(107, 103, 103);
+}
+
+#nav-bar ul, #left-nav ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.active{
+    color: rgb(44, 43, 43) !important;
+    background-color: aliceblue !important;
+}
+
+#nav-bar a, #left-nav a{
+    text-decoration: none;
+    color: aliceblue;
+    background-color: rgb(44, 43, 43);
+    padding: 5px 20px;
+    display: block;
+}
+
+#nav-bar a:hover, #left-nav a:hover{
+    color: rgb(44, 43, 43);
+    background-color: aliceblue;
+}
+
+#left-nav{
+    width: 20% !important;
+    float: left;
+}
+
+#main-content{
+    width: 78%;
+    float: left;
+    margin-left: 10px;
+}
+
+#main-content img{
+    width: 20%;
+    /*transition: 2s width;*/
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    from {width: 20%; transform: rotate(0deg);}
+    to {width: 40%; transform: rotate(180deg);}
+  }
+
+#footer{
+    width: 100%;
+}
+
+#footer-column{
+    width: 30%;
+    float: left;
+    padding: 0px 10px;
+    border-right: 1px solid black;
+}
+
+#footer ul{
+    list-style-type: circle;
+}
+
+#footer ul a{
+    text-decoration-style: dotted;
+    color: black;
+}
+
+#footer ul a:visited{
+    text-decoration-style: dotted;
+    color: red;
+
+}
+
+.clear{
+    clear: both;
+}
+
+@media screen and (max-width: 480px) {
+    #main-content img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 720px) and (min-width: 481px) {
+    #main-content img{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 721px) {
+    #main-content img{
+        width: 30%;
+    }
+}
+
+#main-content img:hover{
+    filter: grayscale(100%);
+    transform: rotate(180deg);
+    width: 23%;
+}
+
